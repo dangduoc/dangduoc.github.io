@@ -1,0 +1,300 @@
+@font-face {
+  font-family: "SVN-Aguda";
+  src: url(/assets/fonts/Aguda/SVN-Aguda\ Regular.otf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: "SVN-Aguda";
+  src: url(/assets/fonts/Aguda/SVN-Aguda\ Light.otf);
+  font-weight: 300;
+}
+@font-face {
+  font-family: "SVN-Aguda";
+  src: url(/assets/fonts/Aguda/SVN-Aguda\ Bold.otf);
+  font-weight: 700;
+}
+@font-face {
+  font-family: "SVN-Aguda";
+  src: url(/assets/fonts/Aguda/SVN-Aguda\ Black.otf);
+  font-weight: 900;
+}
+@font-face {
+  font-family: "Segoe UI";
+  src: url(/assets/fonts/Segoe_UI/segoeui.ttf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Segoe UI";
+  src: url(/assets/fonts/Segoe_UI/segoeuii.ttf);
+  font-weight: 400;
+  font-style: italic;
+}
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  --color-text: #b2b3b6;
+  --color-primary: #348dcc;
+  --color-border: #707070;
+  --app-padding: 50px;
+  --app-menu-width: 100px;
+  font-family: "SVN-Aguda";
+}
+body a {
+  text-decoration: none;
+  color: inherit;
+}
+
+* {
+  box-sizing: content-box;
+  margin: 0;
+  padding: 0;
+}
+
+#app-menu {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  padding: 40px 0;
+  z-index: 9;
+  width: var(--app-menu-width, 100px);
+  text-align: center;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.01);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+#app-menu > .inner {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  height: calc(100% - 80px);
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+#app-language-switcher a {
+  color: #8d8d8d;
+}
+#app-language-switcher a.active {
+  color: var(--color-primary);
+  font-weight: 900;
+}
+#app-language-switcher .line {
+  margin: 8px auto;
+  width: 20px;
+  border-top: 1px solid #b2b3b6;
+}
+
+#app-company-name img {
+  width: 15px;
+}
+
+#app-header {
+  z-index: 8;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding-left: var(--app-menu-width, 100px);
+  box-sizing: border-box;
+}
+#app-header.fixed {
+  transform: translateY(-100%);
+  position: fixed;
+}
+#app-header.fixed.active {
+  transition: transform 1s;
+}
+#app-header.fixed.active.show {
+  transform: translateY(0);
+}
+#app-header:not(.fixed).invisible {
+  transform: translateY(-100%);
+  position: fixed;
+}
+#app-header:not(.fixed).invisible.active {
+  transition: transform 1s;
+}
+#app-header:not(.fixed).invisible.active.show {
+  transform: translateY(0);
+}
+#app-header::before {
+  content: "";
+  width: var(--app-menu-width, 100px);
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background-color: #000;
+  display: block;
+}
+#app-header::after {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #000;
+  content: "";
+  display: block;
+  height: 35px;
+}
+#app-header > .inner {
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  padding: 16px 0;
+  padding-bottom: 100px;
+}
+#app-header > .inner .flex-auto {
+  flex: auto;
+}
+#app-header > .text-mask {
+  display: flex;
+}
+#app-header > .text-mask img {
+  width: 100%;
+  display: block;
+}
+#app-header > .text-mask .flex-1 {
+  flex: 1;
+}
+#app-header > .text-mask::before {
+  content: "";
+  display: block;
+  background-color: #000;
+  width: var(--app-padding, 50px);
+}
+#app-header > .text-mask::after {
+  content: "";
+  display: block;
+  background-color: #000;
+  width: var(--app-padding, 50px);
+}
+#app-header .logo {
+  margin-left: var(--app-padding, 50px);
+}
+#app-header .logo img {
+  width: 140px;
+  height: 140px;
+}
+#app-header .links {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 50px;
+}
+#app-header .links a {
+  color: #b2b3b6;
+  text-decoration: none;
+}
+#app-header .links a.link {
+  position: relative;
+  font-weight: 700;
+}
+#app-header .links a.link:hover {
+  text-decoration: underline;
+  transform: 0.3s;
+}
+#app-header .links a::before {
+  content: attr(data-index);
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 400;
+  /* position: absolute; */
+  line-height: 1;
+  position: absolute;
+  left: -20px;
+  top: 5px;
+}
+#app-header .links.contacts {
+  margin-left: 50px;
+  grid-template-columns: 1fr;
+  margin-right: var(--app-padding, 50px);
+}
+
+#app-footer {
+  background-image: url(/assets/images/footer.png);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-color: #040404;
+  background-size: auto calc(100% - (var(--app-menu-width, 100px) + var(--app-padding, 50px)));
+  color: var(--color-text);
+  padding: 0 var(--app-padding, 50px);
+  padding-left: calc(var(--app-menu-width, 100px) + var(--app-padding, 50px));
+}
+#app-footer > .inner {
+  padding-top: 150px;
+  padding-bottom: 80px;
+  position: relative;
+}
+#app-footer > .inner .app-footer-project-section {
+  bottom: 80px;
+  right: 0;
+  position: absolute;
+  text-align: right;
+}
+#app-footer > .inner .app-footer-project-section a {
+  font-family: "Segoe UI";
+  text-transform: uppercase;
+  cursor: pointer;
+}
+#app-footer > .inner .app-footer-project-section a:hover {
+  text-decoration: underline;
+  transform: 0.5s;
+}
+#app-footer > .inner .app-footer-project-section h1 {
+  font-weight: 900;
+  color: var(--color-primary);
+  font-size: 60px;
+  text-transform: uppercase;
+}
+#app-footer > .bottom {
+  border-top: 1px solid rgba(112, 112, 112, 0.56);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 35px 0;
+}
+#app-footer > .bottom #marmedia {
+  opacity: 0.5;
+  color: inherit;
+  text-decoration: none;
+}
+
+#app-footer-sections {
+  display: inline-grid;
+  grid-template-columns: auto 1fr;
+  gap: 50px;
+}
+#app-footer-sections .app-footer-section {
+  max-width: 300px;
+}
+#app-footer-sections .app-footer-section .label {
+  text-transform: uppercase;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+#app-footer-sections .app-footer-section .content {
+  font-family: "Segoe UI";
+}
+#app-footer-sections .app-footer-section .content a {
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.7;
+  display: block;
+  margin-bottom: 3px;
+}
+#app-footer-sections .app-footer-section .content a:last-child {
+  margin-bottom: 0;
+}
+#app-footer-sections .app-footer-section .content div {
+  margin-bottom: 3px;
+  opacity: 0.7;
+}
+
+#back-to-top-btn {
+  cursor: pointer;
+  text-transform: uppercase;
+}/*# sourceMappingURL=styles.css.map */
