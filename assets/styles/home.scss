@@ -1,4 +1,3 @@
-
 #app-banner {
     width: 100%;
     height: 100vh;
@@ -18,6 +17,7 @@
 
         &.active {
             z-index: 2;
+            animation: scale_animation linear 8s;
             // animation: fadeIn 1s linear forwards;
         }
 
@@ -34,7 +34,16 @@
         font-family: "Segoe UI";
     }
 }
-
+@keyframes scale_animation {
+    from {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    to {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+}
 .section {
     background-color: var(--background, #000);
     color: var(--color-text, #fff);
@@ -44,18 +53,54 @@
         width: 100%;
         margin: 50px 0;
     }
+    .max-width {
+        max-width: 67%;
+        margin-left: auto;
+    }
+    .section-header {
+        padding-top: 200px;
+        padding-bottom: 100px;
+        text-align: left;
+        position: relative;
+        h1 {
+            font-size: 60px;
+            font-weight: 900;
+            color: var(--color-primary);
+            text-transform: uppercase;
+            line-height: 1;
+        }
+        .view-more {
+            position: absolute;
+            right: var(--app-padding, 50px);
+
+            transform: translateY(-50%);
+            top: 50%;
+            margin-top: 50px;
+            text-transform: uppercase;
+            font-family: "Segoe UI";
+            color: #b2b3b6;
+            font-size: 16px;
+            //text-decoration: underline;
+            &.left {
+               // top: 0;
+                left: var(--app-padding, 0);
+            }
+        }
+    }
 }
 #summary {
-    padding: 200px var(--app-padding, 50px);
+    padding-top: 200px;
+    padding-bottom: 200px;
 
     & > .inner {
         position: relative;
-        max-width: 66%;
-        margin-left: auto;
+
+        padding: 0 var(--app-padding, 50px);
         //  padding-right: 24px;
         h1 {
             text-transform: uppercase;
             font-weight: 900;
+            line-height: 1.4;
             & > span {
                 color: var(--color-primary);
             }
@@ -70,36 +115,20 @@
         }
         .view-more {
             position: absolute;
-            right: 0;
+            right: var(--app-padding, 0);
             bottom: 0;
             text-transform: uppercase;
             font-family: "Segoe UI";
+            &.left {
+                top: 0;
+                left: var(--app-padding, 0);
+            }
         }
     }
 }
 #projects {
     //--padding-left: 50px;
-    .section-header {
-        padding: 50px 0;
-        text-align: center;
-        position: relative;
-        .view-more {
-            position: absolute;
-            right: var(--app-padding, 50px);
-            top: 50%;
-            transform: translateY(-50%);
-            text-transform: uppercase;
-            font-family: "Segoe UI";
-            color: #b2b3b6;
-            //text-decoration: underline;
-        }
-    }
-    h1 {
-        font-size: 60px;
-        font-weight: 900;
-        color: var(--color-primary);
-        text-transform: uppercase;
-    }
+
     .project-grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -182,27 +211,6 @@
     }
 }
 #blogs {
-    .section-header {
-        padding: 50px 0;
-        text-align: center;
-        position: relative;
-        .view-more {
-            position: absolute;
-            right: var(--app-padding, 50px);
-            top: 50%;
-            transform: translateY(-50%);
-            text-transform: uppercase;
-            font-family: "Segoe UI";
-            color: #b2b3b6;
-            //text-decoration: underline;
-        }
-    }
-    h1 {
-        font-size: 60px;
-        font-weight: 900;
-        color: var(--color-primary);
-        text-transform: uppercase;
-    }
     .blog-grid {
         display: flex;
         //gap: 32px;
@@ -210,14 +218,17 @@
             flex: 1;
             position: relative;
             overflow-x: hidden;
+            margin-left: -12px;
         }
         .blog-grid-left {
             width: 33%;
-            max-width: 400px;
+            box-sizing: border-box;
+            // max-width: 400px;
             position: relative;
             padding: 0 50px;
         }
     }
+    padding-bottom: 200px;
 }
 #blog-text-slider {
     width: 100%;
