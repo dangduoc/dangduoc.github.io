@@ -1,0 +1,112 @@
+#blog-detail-page {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  position: 8;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #040404;
+}
+#blog-detail-page .btn-close {
+  position: fixed;
+  right: 50px;
+  top: 50px;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  z-index: 1;
+  background-color: transparent;
+}
+#blog-detail-page .content {
+  width: 480px;
+  height: 100%;
+  padding: 0 var(--app-padding, 50px);
+  display: flex;
+  flex-direction: column;
+}
+#blog-detail-page .content .content-body {
+  flex: 1;
+  padding-top: 100px;
+  overflow-y: auto;
+}
+#blog-detail-page .content .content-bottom {
+  margin-bottom: 24px;
+}
+#blog-detail-page .content .content-bottom a {
+  opacity: 0.5;
+}
+#blog-detail-page .content .content-bottom a:hover {
+  opacity: 1;
+}
+#blog-detail-page .photos {
+  height: 100%;
+  background-color: #000;
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+}
+
+#blog-detail-photo-slider {
+  height: 100%;
+}
+#blog-detail-photo-slider .slick-list,
+#blog-detail-photo-slider .slick-track {
+  height: 100%;
+}
+#blog-detail-photo-slider .photo-slide {
+  height: 100%;
+  position: relative;
+}
+#blog-detail-photo-slider .photo-slide img {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+#blog-detail-photo-slider-indexes {
+  position: absolute;
+  z-index: 9;
+  left: 24px;
+  bottom: 30px;
+  letter-spacing: 2px;
+  opacity: 0.5;
+}
+#blog-detail-photo-slider-indexes > span {
+  font-weight: 900;
+}
+
+.blog-content-wrapper .blog-content-header-line {
+  border-top: 1px solid #242424;
+  width: 100%;
+}
+.blog-content-wrapper .blog-content-header {
+  padding: 24px 0;
+}
+.blog-content-wrapper .blog-content-header .title {
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin-bottom: 10px;
+}
+.blog-content-wrapper .blog-content-header .subs {
+  font-family: "Segoe UI";
+}
+.blog-content-wrapper .blog-content-header .subs span {
+  display: inline-block;
+  text-transform: uppercase;
+}
+.blog-content-wrapper .blog-content-text {
+  font-family: "Segoe UI";
+}
+.blog-content-wrapper .blog-content-inner {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.blog-content-wrapper .blog-content-inner .blog-content-text {
+  flex: 1;
+}/*# sourceMappingURL=blog_popup.css.map */

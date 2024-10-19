@@ -1,0 +1,122 @@
+.blog_sliders-grid {
+    display: flex;
+    .grid-right {
+        flex: 1;
+        position: relative;
+        overflow-x: hidden;
+        margin-left: -12px;
+    }
+    .grid-left {
+        width: 33%;
+        box-sizing: border-box;
+        position: relative;
+        padding: 0 50px;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.blog_sliders-text-slider {
+    width: 100%;
+    flex: 1;
+    .slick-track,
+    .slick-list {
+        height: 100%;
+    }
+}
+.blog_sliders-texts-liders-arrows {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 16px;
+    margin-top: 16px;
+    a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        height: 30px;
+        text-align: center;
+        border: 1px solid currentColor;
+        border-radius: 30px;
+        width: 60px;
+        color: #505052;
+        cursor: pointer;
+        &:not(.slick-disabled):hover {
+            color: #b2b3b6;
+        }
+        svg {
+            width: 16px;
+        }
+        &.slick-disabled {
+            cursor: not-allowed;
+            opacity: 0.7;
+        }
+        // &.next {
+        //     img {
+        //         transform: rotate(180deg);
+        //     }
+        // }
+    }
+    &.bordered {
+        padding-bottom: 16px;
+        border-bottom: 1px solid rgba(207, 207, 207, 0.2745098039);
+    }
+}
+
+.blog_sliders-text-slide {
+    .blog-text-header-line {
+        border-top: 1px solid #242424;
+        width: 100%;
+    }
+    .blog-text-header {
+        padding: 24px 0;
+        .title {
+            font-weight: 900;
+            text-transform: uppercase;
+        }
+        .subs {
+            font-family: "Segoe UI";
+            span {
+                display: inline-block;
+                text-transform: uppercase;
+            }
+        }
+    }
+    .blog-text-content {
+        font-family: "Segoe UI";
+        font-style: italic;
+    }
+    .blog-text-footer {
+        font-family: "Segoe UI";
+        margin-top: 24px;
+        .categories {
+            span {
+                display: inline-block;
+                text-transform: uppercase;
+            }
+        }
+    }
+    .blog-text-slide-inner {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        .blog-text-content {
+            flex: 1;
+        }
+    }
+}
+
+.blog_sliders-image-slider {
+    height: var(--height, 480px);
+    .slick-track,
+    .slick-list {
+        height: 100%;
+    }
+    .blog_sliders-image-slide {
+        padding: 0 12px;
+        height: 100%;
+        img {
+            height: 100%;
+        }
+    }
+}

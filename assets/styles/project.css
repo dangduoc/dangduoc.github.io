@@ -1,0 +1,143 @@
+#project-detail-banner {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+#project-detail-banner .app-banner-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+#project-detail-banner .app-banner-image.active {
+  z-index: 2;
+  animation: scale_animation linear 8s;
+}
+#project-detail-banner .project-info {
+  position: absolute;
+  right: 50px;
+  top: 100px;
+  color: #fff;
+  z-index: 9;
+  text-align: right;
+}
+#project-detail-banner .project-info .project-info-line {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 16px;
+  padding: 5px 0;
+}
+#project-detail-banner .project-info .project-info-line img {
+  width: 17.5px;
+}
+
+#project-detail-summary {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  padding-left: var(--app-padding);
+  padding-right: var(--app-padding);
+}
+#project-detail-summary .header {
+  display: flex;
+  padding-bottom: 50px;
+  margin-bottom: 50px;
+  border-bottom: 1px solid rgba(207, 207, 207, 0.2745098039);
+}
+#project-detail-summary .header .title {
+  flex: 1;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: var(--color-primary);
+}
+#project-detail-summary .header .share {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+#project-detail-summary .header .share .label {
+  color: #89a3a3;
+}
+#project-detail-summary .header .share ul {
+  margin-left: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  list-style: none;
+}
+#project-detail-summary .header .share ul li a {
+  padding: 0 12px;
+}
+#project-detail-summary .grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 24px;
+}
+
+#project-detail-footer {
+  padding: 100px var(--app-padding);
+}
+
+.box .box-header {
+  margin-bottom: 50px;
+}
+.box .box-header .label {
+  text-transform: uppercase;
+  color: var(--color-primary);
+  font-weight: 900;
+}
+.box .box-header .value {
+  text-transform: uppercase;
+  font-family: "Segoe UI";
+}
+.box .box-content {
+  text-align: justify;
+  font-family: "Segoe UI";
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.photo-grid .item {
+  color: inherit;
+  text-decoration: none;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  aspect-ratio: 910/531;
+  position: relative;
+  overflow: hidden;
+  background-size: 100% 100%;
+}
+.photo-grid .item:hover {
+  background-size: 110% 110%;
+  transition: background-size 3s;
+}
+.photo-grid .item:hover::before {
+  background-color: rgba(0, 0, 0, 0.3);
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5647058824), transparent, transparent);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  transition: 0.5s;
+}
+.photo-grid .item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  -webkit-backdrop-filter: blur(0);
+          backdrop-filter: blur(0);
+  background-color: rgba(0, 0, 0, 0);
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5647058824), transparent, transparent);
+}/*# sourceMappingURL=project.css.map */

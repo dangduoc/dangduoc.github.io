@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTT Sáng Tạo</title>
+    <link rel="stylesheet" href="/assets/styles/styles.css">
+    <link rel="stylesheet" href="/assets/styles/projects.css">
+    <script src="/assets/scripts/jquery/dist/jquery.min.js"></script>
+</head>
+
+<body>
+    <div id="app-menu">
+        <div class="inner">
+            <div id="app-language">
+                <div id="app-language-switcher">
+                    <a class="active">VN</a>
+                    <div class="line"></div>
+                    <a>EN</a>
+                </div>
+            </div>
+            <div id="app-menu-center-button">
+                <a><img src="/assets/icons/two-lines.svg"></a>
+            </div>
+            <a id="app-company-name" href="/" title="Trang chủ HTT Sáng Tạo">
+                <!-- <img src="/assets/images/HTT SANG TAO.png"> -->
+                <img src="/assets/images/logo.gif">
+            </a>
+        </div>
+    </div>
+    <div id="app-header" class="relative">
+        <div class="inner">
+            <a class="logo" href="/" title="Trang chủ HTT Sáng Tạo">
+                <img alt="HTTC Sang Tao" src="/assets/images/logo.png">
+            </a>
+            <div class="flex-auto"></div>
+            <div class="links">
+
+                <a data-index="1." href="/about/" class="link">
+                    HTTC
+                </a>
+                <a data-index="3." href="/blog/" class="link">
+                    Blog
+                </a>
+                <a data-index="2." href="/project/" class="link">
+                    Dự án
+                </a>
+                <a data-index="4." href="/contact/" class="link">
+                    Liên hệ
+                </a>
+
+            </div>
+            <div class="links contacts">
+                <a href="tel:+8437191216">(+84 24) 43 714 7219</a>
+                <a href="malto:httcreative@gmail.com">admin@httcreative.com</a>
+            </div>
+
+        </div>
+    </div>
+    <div id="projects-wrapper" class="p-l">
+        <div id="project-list-header">
+            <div class="search-box">
+                <span class="label">Tìm kiếm dự án:</span>
+                <div class="input-group">
+                    <input placeholder="Nhập từ khóa...">
+                    <img src="/assets/icons/search.svg">
+                </div>
+            </div>
+            <div class="display-switcher">
+                <span class="label">Hiển thị:</span>
+                <ul>
+                    <li>
+                        <a class="switch-view-btn active" data-type="grid">
+                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect x="17.7178" y="0.568848" width="3.82697" height="3.82697" fill="currentColor" />
+                                <rect x="17.7178" y="9.75342" width="3.82697" height="3.82697" fill="currentColor" />
+                                <rect x="17.7178" y="18.1729" width="3.82697" height="3.82697" fill="currentColor" />
+                                <rect x="9.2998" y="0.568848" width="3.82697" height="3.82697" fill="currentColor" />
+                                <rect x="9.2998" y="9.75342" width="3.82697" height="3.82697" fill="currentColor" />
+                                <rect x="9.2998" y="18.1729" width="3.82697" height="3.82697" fill="currentColor" />
+                                <rect x="0.114258" y="0.568848" width="3.82697" height="3.82697" fill="currentColor" />
+                                <rect x="0.114258" y="9.75342" width="3.82697" height="3.82697" fill="currentColor" />
+                                <rect x="0.114258" y="18.1729" width="3.82697" height="3.82697" fill="currentColor" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="switch-view-btn" data-type="table">
+                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect x="0.569336" y="0.568848" width="21.431" height="3.82697" fill="currentColor" />
+                                <rect x="0.569336" y="9.75342" width="21.431" height="3.82697" fill="currentColor" />
+                                <rect x="0.569336" y="18.1729" width="21.431" height="3.82697" fill="currentColor" />
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="project-list">
+            <div class="project-grid">
+                <a class="project" href="/project/detail.html"
+                    style="background-image: url(/assets/images/projects/1.png);">
+                    <div class="project-info">
+                        <div class="name">KHÁCH SẠN NAM CƯỜNG NAM ĐỊNH</div>
+                        <div class="subs">
+                            <div class="sub">
+                                <div class="label">Thể loại</div>
+                                <div class="value">Khách sạn</div>
+                            </div>
+                            <div class="sub">
+                                <div class="label">Công việc</div>
+                                <div class="value">Nội thất</div>
+                            </div>
+                            <div class="sub">
+                                <div class="label">Vị trí</div>
+                                <div class="value">Nam Định</div>
+                            </div>
+                            <div class="sub">
+                                <div class="label">Năm</div>
+                                <div class="value">2017</div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a class="project" href="/project/detail.html"
+                    style="background-image: url(/assets/images/projects/2.png);">
+                    <div class="project-info">
+                        <div class="name">Nhà chị uyển</div>
+                        <div class="subs">
+                            <div class="sub">
+                                <div class="label">Thể loại</div>
+                                <div class="value">Nhà Phố</div>
+                            </div>
+                            <div class="sub">
+                                <div class="label">Công việc</div>
+                                <div class="value">Kiến trúc, nội thất</div>
+                            </div>
+                            <div class="sub">
+                                <div class="label">Vị trí</div>
+                                <div class="value">Hà Nội</div>
+                            </div>
+                            <div class="sub">
+                                <div class="label">Năm</div>
+                                <div class="value">2023</div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a class="project" href="/project/detail.html"
+                    style="background-image: url(/assets/images/projects/3.png);">
+                    <div class="project-info">
+                        <div class="name">Khách sạn Continetal Sài Gòn</div>
+                        <div class="subs">
+                            <div class="sub">
+                                <div class="label">Thể loại</div>
+                                <div class="value">Khách sạn</div>
+                            </div>
+                            <div class="sub">
+                                <div class="label">Công việc</div>
+                                <div class="value">Nội thất</div>
+                            </div>
+                            <div class="sub">
+                                <div class="label">Vị trí</div>
+                                <div class="value">Hồ Chí Minh</div>
+                            </div>
+                            <div class="sub">
+                                <div class="label">Năm</div>
+                                <div class="value">2012</div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a class="project" href="/project/detail.html"
+                    style="background-image: url(/assets/images/projects/4.png);">
+                    <div class="project-info">
+                        <div class="name">Khách sạn Golden Silk</div>
+                        <div class="subs">
+                            <div class="sub">
+                                <div class="label">Thể loại</div>
+                                <div class="value">Khách sạn</div>
+                            </div>
+                            <div class="sub">
+                                <div class="label">Công việc</div>
+                                <div class="value">Kiến trúc, Nội thất</div>
+                            </div>
+                            <div class="sub">
+                                <div class="label">Vị trí</div>
+                                <div class="value">Hà Nội</div>
+                            </div>
+                            <div class="sub">
+                                <div class="label">Năm</div>
+                                <div class="value">2011</div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a class="project" href="/project/detail.html"
+                    style="background-image: url(/assets/images/projects/5.png);">
+                    <div class="project-info">
+                        <div class="name">Biệt thự Lotus</div>
+                        <div class="subs">
+                            <div class="sub">
+                                <div class="label">Thể loại</div>
+                                <div class="value">Biệt thự</div>
+                            </div>
+                            <div class="sub">
+                                <div class="label">Công việc</div>
+                                <div class="value">Nội thất</div>
+                            </div>
+                            <div class="sub">
+                                <div class="label">Vị trí</div>
+                                <div class="value">Hà Nội</div>
+                            </div>
+                            <div class="sub">
+                                <div class="label">Năm</div>
+                                <div class="value">2024</div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a class="project" href="/project/detail.html"
+                    style="background-image: url(/assets/images/projects/6.png);">
+                    <div class="project-info">
+                        <div class="name">Khu du lịch Tổng hợp Bà Nà</div>
+                        <div class="subs">
+                            <div class="sub">
+                                <div class="label">Thể loại</div>
+                                <div class="value">Giải trí - Thương mại</div>
+                            </div>
+                            <div class="sub">
+                                <div class="label">Công việc</div>
+                                <div class="value">Kiến trúc, Nội thất</div>
+                            </div>
+                            <div class="sub">
+                                <div class="label">Vị trí</div>
+                                <div class="value">Đà Nẵng</div>
+                            </div>
+                            <div class="sub">
+                                <div class="label">Năm</div>
+                                <div class="value">2019</div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="project-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Tên công trình</th>
+                            <th>Thể loại</th>
+                            <th>Công việc</th>
+                            <th>Vị trí</th>
+                            <th style="width: 100px;">Năm</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <a href="/project/detail.html">ACB - NOC TOWER</a>
+                            </td>
+                            <td>
+                                VĂN PHÒNG
+                            </td>
+                            <td>
+                                NỘI THẤT
+                            </td>
+                            <td>
+                                TP. HỒ CHÍ MINH
+                            </td>
+                            <td>
+                                2010
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="/project/detail.html">ACB - NOC TOWER</a>
+                            </td>
+                            <td>
+                                VĂN PHÒNG
+                            </td>
+                            <td>
+                                NỘI THẤT
+                            </td>
+                            <td>
+                                TP. HỒ CHÍ MINH
+                            </td>
+                            <td>
+                                2010
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="/project/detail.html">ACB - NOC TOWER</a>
+                            </td>
+                            <td>
+                                VĂN PHÒNG
+                            </td>
+                            <td>
+                                NỘI THẤT
+                            </td>
+                            <td>
+                                TP. HỒ CHÍ MINH
+                            </td>
+                            <td>
+                                2010
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="/project/detail.html">ACB - NOC TOWER</a>
+                            </td>
+                            <td>
+                                VĂN PHÒNG
+                            </td>
+                            <td>
+                                NỘI THẤT
+                            </td>
+                            <td>
+                                TP. HỒ CHÍ MINH
+                            </td>
+                            <td>
+                                2010
+                            </td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+            <div class="project-list-footer">
+                <ul class="list-pagination">
+                    <li>
+                        <a href="#" class="active">
+                            <span>1</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span>2</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span>3</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="view-switch">
+                    <span class="view-switch-button" data-type="table">
+                        <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0.569336" y="0.568848" width="21.431" height="3.82697" fill="currentColor" />
+                            <rect x="0.569336" y="9.75342" width="21.431" height="3.82697" fill="currentColor" />
+                            <rect x="0.569336" y="18.1729" width="21.431" height="3.82697" fill="currentColor" />
+                        </svg>
+                    </span>
+                    <span class="view-switch-button" data-type="grid">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="17.7178" y="0.568848" width="3.82697" height="3.82697" fill="currentColor" />
+                            <rect x="17.7178" y="9.75342" width="3.82697" height="3.82697" fill="currentColor" />
+                            <rect x="17.7178" y="18.1729" width="3.82697" height="3.82697" fill="currentColor" />
+                            <rect x="9.2998" y="0.568848" width="3.82697" height="3.82697" fill="currentColor" />
+                            <rect x="9.2998" y="9.75342" width="3.82697" height="3.82697" fill="currentColor" />
+                            <rect x="9.2998" y="18.1729" width="3.82697" height="3.82697" fill="currentColor" />
+                            <rect x="0.114258" y="0.568848" width="3.82697" height="3.82697" fill="currentColor" />
+                            <rect x="0.114258" y="9.75342" width="3.82697" height="3.82697" fill="currentColor" />
+                            <rect x="0.114258" y="18.1729" width="3.82697" height="3.82697" fill="currentColor" />
+                        </svg>
+                    </span>
+                    <span>
+                        Nhấp để thay đổi<br>
+                        chế độ hiển thị
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="brand-slider">
+        <div class="inner">
+            <div>
+                <a class="brand" href="/"><img src="/assets/images/brands/1.png"></a>
+            </div>
+            <div>
+                <a class="brand" href="/"><img src="/assets/images/brands/2.png"></a>
+            </div>
+            <div>
+                <a class="brand" href="/"><img src="/assets/images/brands/3.png"></a>
+            </div>
+            <div>
+                <a class="brand" href="/"><img src="/assets/images/brands/4.png"></a>
+            </div>
+            <div>
+                <a class="brand" href="/"><img src="/assets/images/brands/5.png"></a>
+            </div>
+            <div>
+                <a class="brand" href="/"><img src="/assets/images/brands/1.png"></a>
+            </div>
+            <div>
+                <a class="brand" href="/"><img src="/assets/images/brands/2.png"></a>
+            </div>
+            <div>
+                <a class="brand" href="/"><img src="/assets/images/brands/3.png"></a>
+            </div>
+            <div>
+                <a class="brand" href="/"><img src="/assets/images/brands/4.png"></a>
+            </div>
+            <div>
+                <a class="brand" href="/"><img src="/assets/images/brands/5.png"></a>
+            </div>
+        </div>
+    </div>
+    <div id="app-footer">
+        <div class="inner">
+            <div class="app-footer-sections" id="app-footer-sections">
+                <div class="app-footer-section">
+                    <div class="label">
+                        Sơ đồ trang
+                    </div>
+                    <div class="content links">
+                        <a href="#" data-index="1." class="link">HTTC</a>
+                        <a href="#" data-index="2." class="link">DỰ ÁN</a>
+                        <a href="#" data-index="3." class="link">BLOG</a>
+                        <a href="#" data-index="4." class="link">LIÊN HỆ</a>
+                    </div>
+                </div>
+                <div class="app-footer-section">
+                    <div class="label">
+                        Trụ sở chính
+                    </div>
+                    <div class="content">
+                        <div>OV8.O5 Viglacera Xuân Phương,Nam Từ Liêm, Hà Nội.</div>
+                        <a href="#">(+84 24) 43 714 7219</a>
+
+                    </div>
+                </div>
+                <div class="app-footer-section">
+                    <div class="label">
+                        Email kinh doanh
+                    </div>
+                    <div class="content">
+
+                        <a href="#">admin@httcreative.com</a>
+
+                    </div>
+                </div>
+                <div class="app-footer-section">
+                    <div class="label">
+                        Email tuyển dụng
+                    </div>
+                    <div class="content">
+
+                        <a href="#">job.httcreative@gmail.com</a>
+
+                    </div>
+                </div>
+                <div class="app-footer-section">
+                    <div class="label">
+                        Mạng xã hội
+                    </div>
+                    <div class="content">
+
+                        <a href="#">Facebook</a>
+                        <a href="#">Youtube</a>
+                        <a href="#">Instagram</a>
+                    </div>
+                </div>
+                <div class="app-footer-section">
+                    <div class="label">
+                        Hồ sơ năng lực
+                    </div>
+                    <div class="content">
+
+                        <a href="#">[↓] HTTC CP 2024</a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="app-footer-project-section">
+                <a class="label">Khám phá →</a>
+                <h1 class="text">Dự án</h1>
+            </div>
+        </div>
+        <div class="bottom">
+            <div>©2024 HTT Sang Tao, Alrights Reserved</div>
+            <a id="back-to-top-btn">Back to top ↑</a>
+            <div>
+                <a id="marmedia" href="#">Site by MarMedia</a>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $('.switch-view-btn').on('click', function () {
+            $('.switch-view-btn').removeClass('active');
+            $(this).addClass('active')
+            if ($(this).attr('data-type') === 'grid') {
+                $('#project-list').removeClass('table');
+            }
+            else {
+                $('#project-list').addClass('table');
+            }
+        });
+        $('.view-switch-button').on('click', function () {
+            if ($(this).attr('data-type') === 'grid') {
+                $('#project-list').removeClass('table');
+            }
+            else {
+                $('#project-list').addClass('table');
+            }
+        });
+
+
+    </script>
+</body>
+
+</html>

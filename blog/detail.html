@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTT Sáng Tạo</title>
+    <link rel="stylesheet" href="/assets/styles/styles.css">
+    <link rel="stylesheet" href="/assets/styles/blog_popup.css">
+
+
+    <link rel="stylesheet" href="/assets/scripts/slick-carousel/slick/slick.css">
+    <link rel="stylesheet" href="/assets/scripts/slick-carousel/slick/slick-theme.css">
+    <script src="/assets/scripts/jquery/dist/jquery.min.js"></script>
+    <script src="/assets/scripts/slick-carousel/slick/slick.min.js"></script>
+
+</head>
+
+<body>
+    <div id="app-menu">
+        <div class="inner">
+            <div id="app-language">
+                <div id="app-language-switcher">
+                    <a class="active">VN</a>
+                    <div class="line"></div>
+                    <a>EN</a>
+                </div>
+            </div>
+            <div id="app-menu-center-button">
+                <a><img src="/assets/icons/two-lines.svg"></a>
+            </div>
+            <a id="app-company-name" href="/" title="Trang chủ HTT Sáng Tạo">
+                <!-- <img src="/assets/images/HTT SANG TAO.png"> -->
+                <img src="/assets/images/logo.gif">
+            </a>
+        </div>
+    </div>
+    <div id="blog-detail-page" class="p-l">
+        <a class="btn-close" href="/blog/">
+            <svg width="28" height="30" viewBox="0 0 28 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <line x1="26.7151" y1="2.5882" x2="1.08129" y2="28.8099" stroke="#348DCC" stroke-width="2" />
+                <line x1="1.08129" y1="1.19012" x2="26.7151" y2="27.4119" stroke="#348DCC" stroke-width="2" />
+            </svg>
+        </a>
+        <div class="content">
+            <div class="content-body">
+                <div class="blog-content-wrapper">
+                    <div class="blog-content-header-line"></div>
+                    <div class="blog-content-header">
+
+                        <div class="title">Mỗi bề mặt mẫu gạch trang trí 3D đều mang theo câu chuyện riêng để kể. </div>
+                        <div class="subs">
+                            <span>21 THÁNG 09</span> | <span>CẢM HỨNG VÀ Ý TƯỞNG</span>
+                        </div>
+                    </div>
+                    <div class="blog-content-text">
+                        <p>
+                            Dùng hình khối để khắc họa giá trị của vật liệu, dùng không gian để tôn vinh vẻ đẹp mặt
+                            phẳng, cũng vì vậy mà tinh thần điêu khắc trong không gian nay nằm trọn vẹn trong từng viên
+                            gạch.
+                        </p>
+                        <p><br></p>
+                        <p>
+                            Từng mảng miếng nhờ đó mà lại mang ý nghĩa thực thụ khi tất cả đều như được dùng để lột tả
+                            tiềm thức của người “nghệ nhân” thiết kế bên cạnh nhiệm vụ trang trí sự trống trải nơi bức
+                            tường thông thường.
+                        </p>
+                        <p><br></p>
+                        <p>
+                            Khi chúng ta lựa chọn và sắp xếp các viên gạch, chúng ta đang tham gia vào một quá trình
+                            sáng tạo nghệ thuật, tạo nên những không gian sống độc đáo và mang đậm dấu ấn cá nhân. Ánh
+                            sáng, bóng tối, và sự tương tác giữa các hình khối tạo nên những hiệu ứng thị giác đa dạng,
+                            khiến cho không gian trở nên sống động và đầy sức hấp dẫn.
+                        </p>
+                        <p><br></p>
+                        <p>
+                            Thực hiện cùng Nhà Bạn Creative
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="content-bottom">
+                <a href="/blog/" class="link uppercase"><svg width="17" height="8" viewBox="0 0 17 8" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M0.646446 3.64645C0.451185 3.84171 0.451185 4.15829 0.646446 4.35355L3.82843 7.53553C4.02369 7.73079 4.34027 7.73079 4.53553 7.53553C4.7308 7.34027 4.7308 7.02369 4.53553 6.82843L1.70711 4L4.53553 1.17157C4.7308 0.97631 4.7308 0.659727 4.53553 0.464465C4.34027 0.269203 4.02369 0.269203 3.82843 0.464465L0.646446 3.64645ZM17 3.5L1 3.5L1 4.5L17 4.5L17 3.5Z"
+                            fill="currentColor" />
+                    </svg>
+                    Quay lại Blog</a>
+            </div>
+        </div>
+        <div class="photos">
+            <div id="blog-detail-photo-slider">
+                <div class="photo-slide">
+                    <img src="/assets/images/blogs/photos/1lg.png">
+                </div>
+                <div class="photo-slide">
+                    <img src="/assets/images/blogs/photos/2lg.png">
+                </div>
+                <div class="photo-slide">
+                    <img src="/assets/images/blogs/photos/3lg.png">
+                </div>
+
+            </div>
+            <div id="blog-detail-photo-slider-indexes">
+                [<span class="current">1</span>/3]
+            </div>
+        </div>
+    </div>
+    <script>
+        $("#blog-detail-photo-slider").slick({
+            dots: false,
+            infinite: true,
+            speed: 800,
+            fade: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+        });
+        $('#blog-detail-photo-slider').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+            // console.log(nextSlide);
+            $('#blog-detail-photo-slider-indexes>.current').text(nextSlide + 1);
+        });
+    </script>
+</body>
+
+</html>

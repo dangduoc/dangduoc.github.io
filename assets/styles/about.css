@@ -1,0 +1,238 @@
+#summary {
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+#summary .line {
+  border-top: 1px solid var(--color-border);
+  width: 100%;
+  margin: 50px 0;
+}
+#summary .max-width {
+  max-width: 67%;
+  margin-left: auto;
+}
+#summary > .inner {
+  position: relative;
+  padding: 0 var(--app-padding, 50px);
+}
+#summary > .inner h1 {
+  text-transform: uppercase;
+  font-weight: 900;
+  line-height: 1.4;
+}
+#summary > .inner h1 > span {
+  color: var(--color-primary);
+}
+#summary > .inner .text {
+  font-family: "Segoe UI";
+}
+#summary > .inner h1,
+#summary > .inner .text {
+  max-width: 600px;
+  text-align: justify;
+}
+#summary > .inner .view-more {
+  position: absolute;
+  right: var(--app-padding, 0);
+  bottom: 0;
+  font-family: "Segoe UI";
+}
+#summary > .inner .view-more.left {
+  top: 0;
+  right: auto;
+  left: var(--app-padding, 0);
+}
+
+#members {
+  padding-bottom: 200px;
+}
+#members .section-header {
+  padding-top: 200px;
+  padding-bottom: 100px;
+  text-align: left;
+  position: relative;
+}
+#members .section-header .max-width {
+  max-width: 67%;
+  margin-left: auto;
+}
+#members .section-header .view-more {
+  position: absolute;
+  right: var(--app-padding, 50px);
+  transform: translateY(-50%);
+  top: 50%;
+  margin-top: 50px;
+  font-family: "Segoe UI";
+  font-size: 16px;
+}
+#members .section-header .view-more.left {
+  right: auto;
+  left: var(--app-padding, 0);
+}
+#members .blog_sliders-image-slider {
+  --height: auto;
+}
+#members .member-text-header .name {
+  color: var(--color-primary);
+  font-weight: 900;
+  font-size: 110%;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+#members .member-box {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+#members .member-box .img {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 405/546;
+  height: 540px;
+}
+#members .member-box .img img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  -o-object-position: center;
+     object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#members .member-box .info {
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(207, 207, 207, 0.3);
+}
+#members .member-box .info .name {
+  color: var(--color-primary);
+  font-weight: 900;
+  font-size: 110%;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+#members .member-box .info .title {
+  font-family: "Segoe UI";
+  font-weight: 700;
+  text-transform: uppercase;
+}
+#members .member-box .info .sub {
+  font-family: "Segoe UI";
+}
+
+#middle {
+  background-color: #131313;
+  padding-bottom: 200px;
+  padding-top: 200px;
+}
+#middle > .inner {
+  padding-left: var(--app-padding, 50px);
+  padding-right: var(--app-padding, 50px);
+}
+#middle .grid {
+  padding-top: var(--app-padding, 50px);
+  padding-bottom: var(--app-padding, 50px);
+  display: flex;
+  height: 640px;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+}
+#middle .grid .collapsable-box.active {
+  flex: unset;
+}
+#middle .grid .collapsable-box.active h2.title {
+  color: var(--color-primary);
+}
+#middle .grid .collapsable-box.active .content {
+  animation-name: example;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+#middle .grid .collapsable-box.active .content .collapse-area {
+  opacity: 1;
+}
+#middle .grid .collapsable-box.active .toggle-btn span:first-child {
+  display: none;
+}
+#middle .grid .collapsable-box.active .toggle-btn span:last-child {
+  display: inline-block;
+}
+#middle .collapsable-box {
+  border-right: 1px solid #333;
+  position: relative;
+  padding: 0 16px;
+  display: flex;
+  align-items: flex-end;
+  padding-right: 24px;
+  flex: 1;
+}
+#middle .collapsable-box:first-child {
+  border-left: 1px solid #333;
+}
+#middle .collapsable-box h2.title {
+  cursor: pointer;
+  writing-mode: vertical-lr;
+  transform: rotate(-180deg);
+  margin-right: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: inherit;
+}
+#middle .collapsable-box .content {
+  position: relative;
+  max-width: 0;
+  overflow: hidden;
+  transition: max-width 0.5s;
+}
+#middle .collapsable-box .collapse-area {
+  opacity: 0;
+  display: flex;
+  align-items: flex-end;
+  gap: 24px;
+  overflow: hidden;
+  transition: opacity 0.5s;
+  transition-delay: 0.5s;
+}
+#middle .collapsable-box .collapse-area .img {
+  height: 100%;
+}
+#middle .collapsable-box .collapse-area .img img {
+  height: 100%;
+}
+#middle .collapsable-box .collapse-area .text {
+  max-width: 300px;
+  font-family: "Segoe UI";
+  text-align: justify;
+}
+#middle .collapsable-box .toggle-btn {
+  position: absolute;
+  z-index: 1;
+  right: 24px;
+  top: 0;
+  font-size: 36px;
+  cursor: pointer;
+  color: var(--color-primary);
+}
+#middle .collapsable-box .toggle-btn span {
+  display: none;
+}
+#middle .collapsable-box .toggle-btn span:first-child {
+  display: inline-block;
+}
+
+@keyframes example {
+  0% {
+    max-width: 0;
+    opacity: 0;
+  }
+  50% {
+    max-width: 1000px;
+    opacity: 0;
+  }
+  100% {
+    max-width: 1000px;
+    opacity: 1;
+  }
+}/*# sourceMappingURL=about.css.map */

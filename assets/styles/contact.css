@@ -1,0 +1,145 @@
+#app-contact > .inner {
+  position: relative;
+  padding: 200px var(--app-padding, 50px);
+  display: flex;
+  align-items: center;
+}
+#app-contact > .inner::before {
+  content: "";
+  border-top: 1px solid #333;
+  left: var(--app-padding, 50px);
+  top: 0;
+  width: 100%;
+  width: calc(100% - 2 * var(--app-padding, 50px));
+  position: absolute;
+}
+#app-contact > .inner .text {
+  flex: 1;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 1.8;
+}
+#app-contact > .inner .text .black {
+  font-weight: 900;
+}
+#app-contact > .inner #contact-form {
+  flex: 1;
+}
+
+#contact-form {
+  font-size: 1rem;
+}
+#contact-form h1 {
+  margin-bottom: 50px;
+}
+#contact-form .form-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 34px;
+}
+#contact-form .input {
+  position: relative;
+  border-bottom: 1px solid #333;
+}
+#contact-form .input::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-primary);
+  transition: 0.4s;
+}
+#contact-form .input:focus-within::after {
+  width: 100%;
+  transition: 0.4s;
+  left: 0;
+}
+#contact-form .input:not(.block) .label {
+  text-transform: uppercase;
+  font-family: "Segoe UI";
+  position: absolute;
+  bottom: 12px;
+  left: 0;
+  color: inherit;
+  pointer-events: none;
+  transition: 0.2s ease all;
+}
+#contact-form .input:not(.block) input {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+#contact-form .input:not(.block) input:not(:-moz-placeholder-shown) ~ .label {
+  top: -16px;
+  bottom: unset;
+  font-size: 13px;
+}
+#contact-form .input:not(.block) input:not(:placeholder-shown) ~ .label {
+  top: -16px;
+  bottom: unset;
+  font-size: 13px;
+}
+#contact-form .input:not(.block) input:focus ~ .label {
+  top: -16px;
+  bottom: unset;
+  font-size: 13px;
+}
+#contact-form .input.block {
+  margin-top: 34px;
+}
+#contact-form .input.block .label {
+  text-transform: uppercase;
+  font-family: "Segoe UI";
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: inherit;
+  pointer-events: none;
+  transition: 0.2s ease all;
+}
+#contact-form .input.block textarea {
+  resize: none;
+  padding-top: 12px;
+}
+#contact-form .input.block textarea:not(:-moz-placeholder-shown) ~ .label {
+  top: -16px;
+  font-size: 13px;
+}
+#contact-form .input.block textarea:not(:placeholder-shown) ~ .label {
+  top: -16px;
+  font-size: 13px;
+}
+#contact-form .input.block textarea:focus ~ .label {
+  top: -16px;
+  font-size: 13px;
+}
+#contact-form .input input,
+#contact-form .input textarea {
+  width: 100%;
+  border: 0;
+  background-color: transparent;
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: 600;
+}
+#contact-form .input input:focus,
+#contact-form .input textarea:focus {
+  outline: 0;
+  border: 0;
+  box-shadow: 0;
+}
+#contact-form ._btn.outlined {
+  margin-top: 50px;
+  padding: 5px 24px;
+  color: rgba(178, 179, 182, 0.5);
+  transition: 0.3s;
+}
+#contact-form ._btn.outlined:hover {
+  color: rgb(178, 179, 182);
+}
+#contact-form ._btn.outlined svg {
+  transform: rotate(180deg);
+}/*# sourceMappingURL=contact.css.map */

@@ -1,0 +1,254 @@
+#summary {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    .line {
+        border-top: 1px solid var(--color-border);
+        width: 100%;
+        margin: 50px 0;
+    }
+    .max-width {
+        max-width: 67%;
+        margin-left: auto;
+    }
+    & > .inner {
+        position: relative;
+
+        padding: 0 var(--app-padding, 50px);
+        //  padding-right: 24px;
+        h1 {
+            text-transform: uppercase;
+            font-weight: 900;
+            line-height: 1.4;
+            & > span {
+                color: var(--color-primary);
+            }
+        }
+        .text {
+            font-family: "Segoe UI";
+        }
+        h1,
+        .text {
+            max-width: 600px;
+            text-align: justify;
+        }
+        .view-more {
+            position: absolute;
+            right: var(--app-padding, 0);
+            bottom: 0;
+            //  text-transform: uppercase;
+            font-family: "Segoe UI";
+            &.left {
+                top: 0;
+                right: auto;
+                left: var(--app-padding, 0);
+            }
+        }
+    }
+}
+#members {
+    .section-header {
+        padding-top: 200px;
+        padding-bottom: 100px;
+        text-align: left;
+        position: relative;
+        .max-width {
+            max-width: 67%;
+            margin-left: auto;
+        }
+        .view-more {
+            position: absolute;
+            right: var(--app-padding, 50px);
+
+            transform: translateY(-50%);
+            top: 50%;
+            margin-top: 50px;
+            //text-transform: uppercase;
+            font-family: "Segoe UI";
+            // color: #b2b3b6;
+            font-size: 16px;
+            //text-decoration: underline;
+            &.left {
+                // top: 0;
+                right: auto;
+                left: var(--app-padding, 0);
+            }
+        }
+    }
+    .blog_sliders-image-slider {
+        --height: auto;
+    }
+    .member-text-header {
+        .name {
+            color: var(--color-primary);
+            font-weight: 900;
+            font-size: 110%;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+    }
+    .member-box {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+
+        .img {
+            flex: 1;
+            position: relative;
+            overflow: hidden;
+            aspect-ratio: 405/546;
+            height: 540px;
+            img {
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 100%;
+                width: 100%;
+                object-position: center;
+                object-fit: cover;
+            }
+        }
+        .info {
+            padding: 16px 0;
+            border-bottom: 1px solid rgba(207, 207, 207, 0.3);
+            .name {
+                color: var(--color-primary);
+                font-weight: 900;
+                font-size: 110%;
+                margin-bottom: 5px;
+                text-transform: uppercase;
+            }
+            .title {
+                font-family: "Segoe UI";
+                font-weight: 700;
+                text-transform: uppercase;
+            }
+            .sub {
+                font-family: "Segoe UI";
+            }
+        }
+    }
+    padding-bottom: 200px;
+}
+#middle {
+    background-color: #131313;
+    padding-bottom: 200px;
+    padding-top: 200px;
+    & > .inner {
+        padding-left: var(--app-padding, 50px);
+        padding-right: var(--app-padding, 50px);
+    }
+    .grid {
+        padding-top: var(--app-padding, 50px);
+        padding-bottom: var(--app-padding, 50px);
+        display: flex;
+        height: 640px;
+        border-top: 1px solid #333;
+        border-bottom: 1px solid #333;
+        .collapsable-box.active {
+            flex: unset;
+            h2.title {
+                color: var(--color-primary);
+            }
+            .content {
+                animation-name: example;
+                animation-duration: 1s;
+                animation-fill-mode: forwards;
+                .collapse-area {
+                    opacity: 1;
+                }
+            }
+            .toggle-btn {
+                span {
+                    &:first-child {
+                        display: none;
+                    }
+                    &:last-child {
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+    }
+    .collapsable-box {
+        border-right: 1px solid #333;
+        &:first-child {
+            border-left: 1px solid #333;
+        }
+        position: relative;
+        padding: 0 16px;
+        display: flex;
+        align-items: flex-end;
+        padding-right: 24px;
+        flex: 1;
+        h2.title {
+            cursor: pointer;
+            writing-mode: vertical-lr;
+            transform: rotate(-180deg);
+            margin-right: 24px;
+
+            font-weight: 700;
+            text-transform: uppercase;
+            color: inherit;
+        }
+        .content {
+            position: relative;
+            max-width: 0;
+            overflow: hidden;
+            transition: max-width 0.5s;
+        }
+        .collapse-area {
+            opacity: 0;
+
+            display: flex;
+            align-items: flex-end;
+            gap: 24px;
+            //visibility: hidden;
+            //max-width: 1px;
+            overflow: hidden;
+            transition: opacity 0.5s;
+            transition-delay: 0.5s;
+            .img {
+                height: 100%;
+
+                img {
+                    height: 100%;
+                }
+            }
+            .text {
+                max-width: 300px;
+                font-family: "Segoe UI";
+                text-align: justify;
+            }
+        }
+        .toggle-btn {
+            position: absolute;
+            z-index: 1;
+            right: 24px;
+            top: 0;
+            font-size: 36px;
+            cursor: pointer;
+            color: var(--color-primary);
+            span {
+                display: none;
+                &:first-child {
+                    display: inline-block;
+                }
+            }
+        }
+    }
+}
+
+@keyframes example {
+    0% {
+        max-width: 0;
+        opacity: 0;
+    }
+    50% {
+        max-width: 1000px;
+        opacity: 0;
+    }
+    100% {
+        max-width: 1000px;
+        opacity: 1;
+    }
+}
