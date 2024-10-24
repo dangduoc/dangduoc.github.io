@@ -19,7 +19,7 @@
   background-color: transparent;
 }
 #blog-detail-page .content {
-  width: 480px;
+  width: 410px;
   height: 100%;
   padding: 0 var(--app-padding, 50px);
   display: flex;

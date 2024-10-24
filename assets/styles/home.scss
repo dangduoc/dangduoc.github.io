@@ -7,18 +7,26 @@
         position: absolute;
         top: 0;
         left: 0;
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
+
         width: 100%;
         height: 100%;
         z-index: 0;
+        background-color: #000;
         //background-size: 100% 100%;
         &.active {
             z-index: 2;
-            animation: scale_animation linear 8s;
+            & > div {
+                animation: scale_animation linear 8s;
+            }
             // animation: fadeIn 1s linear forwards;
+        }
+        & > div {
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            width: 100%;
+            height: 100%;
         }
 
         // opacity: 0;
@@ -36,12 +44,12 @@
 }
 @keyframes scale_animation {
     from {
-        background-size: 100%;
-        // transform: scale(1);
+        // background-size: 100% 100%;
+        transform: scale(1);
     }
     to {
-        background-size: 110%;
-        //transform: scale(1.1);
+        // background-size: 110% 110%;
+        transform: scale(1.1);
     }
 }
 .section {
@@ -53,55 +61,41 @@
         width: 100%;
         margin: 50px 0;
     }
-    .max-width {
-        max-width: 67%;
-        margin-left: auto;
-    }
+
     .section-header {
-        padding-top: 200px;
-        padding-bottom: 100px;
+        padding-top: var(--app-padding-vertical, 200px);
+        padding-bottom: 35px;
+        padding-left: var(--app-padding, 0);
+        padding-right: var(--app-padding, 0);
         text-align: left;
         position: relative;
-        h1 {
-            font-size: 60px;
-            font-weight: 900;
-            color: var(--color-primary);
-            text-transform: uppercase;
-            line-height: 1;
-        }
         .view-more {
-            position: absolute;
-            right: var(--app-padding, 50px);
-
-            transform: translateY(-50%);
-            top: 50%;
-            margin-top: 50px;
-            //text-transform: uppercase;
             font-family: "Segoe UI";
-            // color: #b2b3b6;
-            font-size: 16px;
-            //text-decoration: underline;
-            &.left {
-                // top: 0;
-                right: auto;
-                left: var(--app-padding, 0);
+            display: block;
+            & ~ h1 {
+                margin-top: 50px;
             }
         }
     }
 }
 #summary {
-    padding-top: 200px;
-    padding-bottom: 200px;
+    padding-top: var(--app-padding-vertical, 200px);
+    padding-bottom: var(--app-padding-vertical, 200px);
 
     & > .inner {
         position: relative;
 
         padding: 0 var(--app-padding, 50px);
         //  padding-right: 24px;
+        & > a.view-more {
+            display: block;
+            margin-bottom: 50px;
+        }
         h1 {
             text-transform: uppercase;
             font-weight: 900;
             line-height: 1.4;
+            font-size: 24px;
             & > span {
                 color: var(--color-primary);
             }
@@ -114,26 +108,14 @@
             max-width: 600px;
             text-align: justify;
         }
-        .view-more {
-            position: absolute;
-            right: var(--app-padding, 0);
-            bottom: 0;
-            //  text-transform: uppercase;
-            font-family: "Segoe UI";
-            &.left {
-                top: 0;
-                left: var(--app-padding, 0);
-            }
-        }
     }
 }
 #projects {
     //--padding-left: 50px;
 
     .project-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
         .project {
+            display: block;
             color: inherit;
             text-decoration: none;
             background-position: center;
@@ -212,138 +194,14 @@
     }
 }
 #blogs {
-    padding-bottom: 200px;
+    padding-bottom: var(--app-padding-vertical, 200px);
 }
-// #blogs {
-//     .blog-grid {
-//         display: flex;
-//         //gap: 32px;
-//         .blog-grid-right {
-//             flex: 1;
-//             position: relative;
-//             overflow-x: hidden;
-//             margin-left: -12px;
-//         }
-//         .blog-grid-left {
-//             width: 33%;
-//             box-sizing: border-box;
-//             // max-width: 400px;
-//             position: relative;
-//             padding: 0 50px;
-//             display: flex;
-//             flex-direction: column;
-//         }
-//     }
-//     padding-bottom: 200px;
-// }
-// #blog-text-slider {
-//     width: 100%;
-//     flex: 1;
-//     .slick-track,
-//     .slick-list {
-//         height: 100%;
-//     }
-// }
-// #blog-text-slider-arrows {
-//     display: flex;
-//     align-items: center;
-//     justify-content: flex-start;
-//     gap: 16px;
-//     margin-top: 16px;
-//     a {
-//         display: inline-flex;
-//         align-items: center;
-//         justify-content: center;
-//         height: 30px;
-//         text-align: center;
-//         border: 1px solid currentColor;
-//         border-radius: 30px;
-//         width: 60px;
-//         color: #505052;
-//         cursor: pointer;
-//         &:not(.slick-disabled):hover {
-//             color: #b2b3b6;
-//         }
-//         svg {
-//             width: 16px;
-//         }
-//         &.slick-disabled {
-//             cursor: not-allowed;
-//             opacity: 0.7;
-//         }
-//         // &.next {
-//         //     img {
-//         //         transform: rotate(180deg);
-//         //     }
-//         // }
-//     }
-// }
-// .blog-text-slide {
-//     .blog-text-header-line {
-//         border-top: 1px solid var(--color-border);
-//         width: 100%;
-//     }
-//     .blog-text-header {
-//         padding: 24px 0;
-//         .title {
-//             font-weight: 900;
-//             text-transform: uppercase;
-//         }
-//         .subs {
-//             font-family: "Segoe UI";
-//             span {
-//                 display: inline-block;
-//                 text-transform: uppercase;
-//             }
-//         }
-//     }
-//     .blog-text-content {
-//         font-family: "Segoe UI";
-//         font-style: italic;
-//     }
-//     .blog-text-footer {
-//         font-family: "Segoe UI";
-//         margin-top: 24px;
-//         .categories {
-//             span {
-//                 display: inline-block;
-//                 text-transform: uppercase;
-//             }
-//         }
-//     }
-//     .blog-text-slide-inner {
-//         height: 100%;
-//         display: flex;
-//         flex-direction: column;
-//         .blog-text-content {
-//             flex: 1;
-//         }
-//     }
-// }
-// #blog-image-slider {
-//     height: 480px;
-//     //  overflow: hidden;
-//     .slick-track,
-//     .slick-list {
-//         height: 100%;
-//     }
-//     .blog-image-slide {
-//         padding: 0 12px;
-//         // display: inline-block;
-//         height: 100%;
-//         img {
-//             height: 100%;
-//         }
-//     }
-//     // & > .inner {
-//     //     position: absolute;
-//     //     white-space: nowrap;
-//     //     overflow-y: hidden;
-//     //     top: 0;
-//     //     height: 100%;
-//     //     transition: left 1s ease-in-out;
-//     // }
-// }
+
+@media screen and (max-width: 992px) {
+    .hide-sm {
+        display: none !important;
+    }
+}
 
 @keyframes fadeIn {
     0% {
@@ -353,6 +211,77 @@
         opacity: 1;
     }
 }
+@media screen and (min-width: 768px) {
+    #projects {
+        //--padding-left: 50px;
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}
+@media screen and (min-width: 992px) {
+    .section {
+        .max-width {
+            max-width: 60%;
+            margin-left: auto;
+        }
+        .section-header {
+            padding-left: 0;
+            padding-right: 0;
+            padding-bottom: 100px;
+            .view-more {
+                position: absolute;
+                right: var(--app-padding, 50px);
+                transform: translateY(-50%);
+                top: 50%;
+                margin-top: 50px;
+                //text-transform: uppercase;
+                //font-family: "Segoe UI";
+                // color: #b2b3b6;
+                font-size: 16px;
+                //text-decoration: underline;
+                &.left {
+                    // top: 0;
+                    right: auto;
+                    left: var(--app-padding, 0);
+                }
+                & ~ h1 {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+
+    #summary {
+        & > .inner {
+            h1 {
+                font-size: 2rem;
+            }
+            & > a.view-more {
+                display: inline-block;
+                margin-bottom: 0;
+                position: absolute;
+                right: var(--app-padding, 0);
+                bottom: 0;
+                //  text-transform: uppercase;
+                //font-family: "Segoe UI";
+                &.left {
+                    top: 0;
+                    bottom: unset;
+                    right: unset;
+                    left: var(--app-padding, 0);
+                }
+            }
+        }
+    }
+    // #app-banner {
+    //     .app-banner-image {
+    //     }
+    // }
+}
+
 @media screen and (min-width: 1600px) {
     #blogs {
         .blog-grid {

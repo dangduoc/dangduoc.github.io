@@ -1,24 +1,25 @@
 #summary {
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: var(--app-padding-vertical, 200px);
+  padding-bottom: var(--app-padding-vertical, 200px);
 }
 #summary .line {
-  border-top: 1px solid var(--color-border);
+  border-top: 1px solid var(--app-border-color);
   width: 100%;
   margin: 50px 0;
-}
-#summary .max-width {
-  max-width: 67%;
-  margin-left: auto;
 }
 #summary > .inner {
   position: relative;
   padding: 0 var(--app-padding, 50px);
 }
+#summary > .inner > a.view-more {
+  display: block;
+  margin-bottom: 50px;
+}
 #summary > .inner h1 {
   text-transform: uppercase;
   font-weight: 900;
   line-height: 1.4;
+  font-size: 24px;
 }
 #summary > .inner h1 > span {
   color: var(--color-primary);
@@ -31,43 +32,24 @@
   max-width: 600px;
   text-align: justify;
 }
-#summary > .inner .view-more {
-  position: absolute;
-  right: var(--app-padding, 0);
-  bottom: 0;
-  font-family: "Segoe UI";
-}
-#summary > .inner .view-more.left {
-  top: 0;
-  right: auto;
-  left: var(--app-padding, 0);
-}
 
 #members {
-  padding-bottom: 200px;
+  padding-bottom: var(--app-padding-vertical, 200px);
 }
 #members .section-header {
-  padding-top: 200px;
-  padding-bottom: 100px;
+  padding-top: var(--app-padding-vertical, 200px);
+  padding-bottom: 35px;
+  padding-left: var(--app-padding, 0);
+  padding-right: var(--app-padding, 0);
   text-align: left;
   position: relative;
 }
-#members .section-header .max-width {
-  max-width: 67%;
-  margin-left: auto;
-}
 #members .section-header .view-more {
-  position: absolute;
-  right: var(--app-padding, 50px);
-  transform: translateY(-50%);
-  top: 50%;
-  margin-top: 50px;
   font-family: "Segoe UI";
-  font-size: 16px;
+  display: block;
 }
-#members .section-header .view-more.left {
-  right: auto;
-  left: var(--app-padding, 0);
+#members .section-header .view-more ~ h1 {
+  margin-top: 50px;
 }
 #members .blog_sliders-image-slider {
   --height: auto;
@@ -103,6 +85,7 @@
      object-fit: cover;
 }
 #members .member-box .info {
+  display: none;
   padding: 16px 0;
   border-bottom: 1px solid rgba(207, 207, 207, 0.3);
 }
@@ -124,34 +107,20 @@
 
 #middle {
   background-color: #131313;
-  padding-bottom: 200px;
-  padding-top: 200px;
+  padding-bottom: var(--app-padding-vertical, 200px);
+  padding-top: var(--app-padding-vertical, 200px);
 }
 #middle > .inner {
   padding-left: var(--app-padding, 50px);
   padding-right: var(--app-padding, 50px);
 }
-#middle .grid {
-  padding-top: var(--app-padding, 50px);
-  padding-bottom: var(--app-padding, 50px);
-  display: flex;
-  height: 640px;
-  border-top: 1px solid #333;
-  border-bottom: 1px solid #333;
-}
-#middle .grid .collapsable-box.active {
-  flex: unset;
-}
 #middle .grid .collapsable-box.active h2.title {
   color: var(--color-primary);
 }
 #middle .grid .collapsable-box.active .content {
-  animation-name: example;
-  animation-duration: 1s;
+  animation-name: example1;
+  animation-duration: 0.5s;
   animation-fill-mode: forwards;
-}
-#middle .grid .collapsable-box.active .content .collapse-area {
-  opacity: 1;
 }
 #middle .grid .collapsable-box.active .toggle-btn span:first-child {
   display: none;
@@ -160,59 +129,42 @@
   display: inline-block;
 }
 #middle .collapsable-box {
-  border-right: 1px solid #333;
   position: relative;
-  padding: 0 16px;
-  display: flex;
-  align-items: flex-end;
-  padding-right: 24px;
-  flex: 1;
-}
-#middle .collapsable-box:first-child {
-  border-left: 1px solid #333;
 }
 #middle .collapsable-box h2.title {
   cursor: pointer;
-  writing-mode: vertical-lr;
-  transform: rotate(-180deg);
-  margin-right: 24px;
+  padding: 24px 0;
   font-weight: 700;
   text-transform: uppercase;
   color: inherit;
 }
 #middle .collapsable-box .content {
   position: relative;
-  max-width: 0;
+  max-height: 0;
   overflow: hidden;
-  transition: max-width 0.5s;
+  transition: max-height 0.5s;
 }
 #middle .collapsable-box .collapse-area {
-  opacity: 0;
-  display: flex;
-  align-items: flex-end;
-  gap: 24px;
   overflow: hidden;
-  transition: opacity 0.5s;
-  transition-delay: 0.5s;
 }
 #middle .collapsable-box .collapse-area .img {
-  height: 100%;
+  margin-bottom: 24px;
 }
 #middle .collapsable-box .collapse-area .img img {
-  height: 100%;
+  max-width: 100%;
 }
 #middle .collapsable-box .collapse-area .text {
-  max-width: 300px;
   font-family: "Segoe UI";
   text-align: justify;
 }
 #middle .collapsable-box .toggle-btn {
   position: absolute;
   z-index: 1;
-  right: 24px;
-  top: 0;
+  right: 0;
+  top: 24px;
   font-size: 36px;
   cursor: pointer;
+  line-height: 1;
   color: var(--color-primary);
 }
 #middle .collapsable-box .toggle-btn span {
@@ -234,5 +186,166 @@
   100% {
     max-width: 1000px;
     opacity: 1;
+  }
+}
+@keyframes example1 {
+  0% {
+    max-height: 0;
+    opacity: 0;
+  }
+  50% {
+    max-height: 1000px;
+    opacity: 0;
+  }
+  100% {
+    max-height: 1000px;
+    opacity: 1;
+  }
+}
+._full-page-banner .link-bottom-right {
+  z-index: 2;
+}
+
+@media screen and (min-width: 992px) {
+  #summary .max-width {
+    max-width: 60%;
+    margin-left: auto;
+  }
+  #summary > .inner h1 {
+    font-size: 2rem;
+  }
+  #summary > .inner > a.view-more {
+    display: inline-block;
+    margin-bottom: 0;
+    position: absolute;
+    right: var(--app-padding, 0);
+    bottom: 0;
+  }
+  #summary > .inner > a.view-more.left {
+    top: 0;
+    bottom: unset;
+    right: unset;
+    left: var(--app-padding, 0);
+  }
+  #members .section-header {
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 100px;
+  }
+  #members .section-header .view-more {
+    position: absolute;
+    right: var(--app-padding, 50px);
+    transform: translateY(-50%);
+    top: 50%;
+    margin-top: 50px;
+    font-size: 16px;
+  }
+  #members .section-header .view-more.left {
+    right: auto;
+    left: var(--app-padding, 0);
+  }
+  #members .section-header .view-more ~ h1 {
+    margin-top: 0;
+  }
+  #members .max-width {
+    max-width: 60%;
+    margin-left: auto;
+  }
+  #members .member-box .info {
+    display: block;
+  }
+  #middle .grid {
+    padding-top: var(--app-padding, 50px);
+    padding-bottom: var(--app-padding, 50px);
+    display: flex;
+    height: 680px;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+  }
+  #middle .grid .collapsable-box.active {
+    flex: unset;
+  }
+  #middle .grid .collapsable-box.active h2.title {
+    color: var(--color-primary);
+  }
+  #middle .grid .collapsable-box.active .content {
+    animation-name: example;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+  #middle .grid .collapsable-box.active .content .collapse-area {
+    opacity: 1;
+  }
+  #middle .grid .collapsable-box.active .toggle-btn span:first-child {
+    display: none;
+  }
+  #middle .grid .collapsable-box.active .toggle-btn span:last-child {
+    display: inline-block;
+  }
+  #middle .collapsable-box {
+    border-right: 1px solid #333;
+    position: relative;
+    padding: 0 16px;
+    display: flex;
+    align-items: flex-end;
+    padding-right: 24px;
+    flex: 1;
+  }
+  #middle .collapsable-box:first-child {
+    border-left: 1px solid #333;
+  }
+  #middle .collapsable-box h2.title {
+    cursor: pointer;
+    writing-mode: vertical-lr;
+    transform: rotate(-180deg);
+    margin-right: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: inherit;
+  }
+  #middle .collapsable-box .content {
+    position: relative;
+    max-width: 0;
+    max-height: unset;
+    overflow: hidden;
+    transition: max-width 0.5s;
+    height: 100%;
+  }
+  #middle .collapsable-box .collapse-area {
+    opacity: 0;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    gap: 24px;
+    overflow: hidden;
+    transition: opacity 0.5s;
+    transition-delay: 0.5s;
+  }
+  #middle .collapsable-box .collapse-area .img {
+    margin-bottom: 0;
+    height: 100%;
+  }
+  #middle .collapsable-box .collapse-area .img img {
+    height: 100%;
+  }
+  #middle .collapsable-box .collapse-area .text {
+    max-width: 400px;
+    font-family: "Segoe UI";
+    text-align: justify;
+  }
+  #middle .collapsable-box .toggle-btn {
+    position: absolute;
+    z-index: 1;
+    right: 24px;
+    top: 0;
+    font-size: 36px;
+    cursor: pointer;
+    color: var(--color-primary);
+  }
+  #middle .collapsable-box .toggle-btn span {
+    display: none;
+  }
+  #middle .collapsable-box .toggle-btn span:first-child {
+    display: inline-block;
   }
 }/*# sourceMappingURL=about.css.map */

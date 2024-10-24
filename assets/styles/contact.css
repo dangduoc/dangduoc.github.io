@@ -1,12 +1,10 @@
 #app-contact > .inner {
+  padding: var(--app-padding-vertical) var(--app-padding, 50px);
   position: relative;
-  padding: 200px var(--app-padding, 50px);
-  display: flex;
-  align-items: center;
 }
 #app-contact > .inner::before {
   content: "";
-  border-top: 1px solid #333;
+  border-top: 1px solid var(--app-border-color, #333);
   left: var(--app-padding, 50px);
   top: 0;
   width: 100%;
@@ -14,14 +12,19 @@
   position: absolute;
 }
 #app-contact > .inner .text {
-  flex: 1;
-  text-transform: uppercase;
-  font-weight: 300;
-  font-size: 22px;
-  line-height: 1.8;
+  text-align: left;
 }
 #app-contact > .inner .text .black {
   font-weight: 900;
+}
+#app-contact > .inner .text .t {
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 20px;
+}
+#app-contact > .inner .text a.link {
+  display: block;
+  margin-bottom: 50px;
 }
 #app-contact > .inner #contact-form {
   flex: 1;
@@ -29,18 +32,20 @@
 
 #contact-form {
   font-size: 1rem;
+  margin-top: 50px;
 }
 #contact-form h1 {
   margin-bottom: 50px;
 }
 #contact-form .form-fields {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 34px;
+  margin-bottom: 36px;
 }
 #contact-form .input {
   position: relative;
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid var(--app-border-color, #333);
+}
+#contact-form .input + .input {
+  margin-top: 36px;
 }
 #contact-form .input::after {
   content: "";
@@ -66,6 +71,7 @@
   color: inherit;
   pointer-events: none;
   transition: 0.2s ease all;
+  opacity: 0.7;
 }
 #contact-form .input:not(.block) input {
   padding-top: 12px;
@@ -95,6 +101,7 @@
   position: absolute;
   top: 0;
   left: 0;
+  opacity: 0.7;
   color: inherit;
   pointer-events: none;
   transition: 0.2s ease all;
@@ -142,4 +149,32 @@
 }
 #contact-form ._btn.outlined svg {
   transform: rotate(180deg);
+}
+
+@media screen and (min-width: 992px) {
+  #app-contact > .inner {
+    display: flex;
+  }
+  #app-contact > .inner .text {
+    flex: 1;
+  }
+  #app-contact > .inner .text .t {
+    font-size: 22px;
+  }
+  #app-contact > .inner .text a.link {
+    display: block;
+    margin-bottom: 100px;
+  }
+  #contact-form {
+    margin-top: 0;
+  }
+  #contact-form .form-fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 34px;
+    margin-bottom: 0;
+  }
+  #contact-form .input + .input {
+    margin-top: 0;
+  }
 }/*# sourceMappingURL=contact.css.map */

@@ -9,10 +9,7 @@
     <link rel="stylesheet" href="/assets/styles/project.css">
 
     <link rel="stylesheet" href="/node_modules/photoswipe/dist/photoswipe.css">
-
-    <!-- lightgallery plugins -->
-    <!-- <link type="text/css" rel="stylesheet" href="css/lg-zoom.css" />
-    <link type="text/css" rel="stylesheet" href="css/lg-thumbnail.css" /> -->
+    <!-- <script src="/assets/scripts/jquery/dist/jquery.min.js"></script> -->
 </head>
 
 <body>
@@ -26,7 +23,13 @@
                 </div>
             </div>
             <div id="app-menu-center-button">
-                <a><img src="/assets/icons/two-lines.svg"></a>
+                <a>
+                    <svg width="38" height="15" viewBox="0 0 38 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line class="line1" y1="1.5" x2="38" y2="1.5" stroke="#348DCC" stroke-width="2" />
+                        <line class="line2" y1="13.5" x2="38" y2="13.5" stroke="#348DCC" stroke-width="2" />
+                    </svg>
+
+                </a>
             </div>
             <a id="app-company-name" href="/" title="Trang chủ HTT Sáng Tạo">
                 <!-- <img src="/assets/images/HTT SANG TAO.png"> -->
@@ -34,7 +37,49 @@
             </a>
         </div>
     </div>
+    <div id="app-header" data-type="hidden" class="fixed active">
+        <div class="inner">
+            <a class="logo" href="/" title="Trang chủ HTT Sáng Tạo">
+                <img alt="HTT Sang Tao" src="/assets/images/logo.png">
+            </a>
+            <div class="flex-auto"></div>
+            <div class="links">
+                <a data-index="1." href="/about/" class="link">
+                    HTTC
+                </a>
+                <a data-index="3." href="/blog/" class="link">
+                    Blog
+                </a>
+                <a data-index="2." href="/project/" class="link">
+                    Dự án
+                </a>
+                <a data-index="4." href="/contact/" class="link">
+                    Liên hệ
+                </a>
 
+            </div>
+            <div class="links contacts">
+                <a href="tel:+8437191216">(+84 24) 43 714 7219</a>
+                <a href="malto:httcreative@gmail.com">admin@httcreative.com</a>
+            </div>
+            <a id="app-header-menu-toggler" class="menu-toggler">
+                <svg width="38" height="15" viewBox="0 0 38 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line class="line1" y1="1.5" x2="38" y2="1.5" stroke="#348DCC" stroke-width="2" />
+                    <line class="line2" y1="13.5" x2="38" y2="13.5" stroke="#348DCC" stroke-width="2" />
+                </svg>
+
+            </a>
+
+        </div>
+        <div class="space">
+
+        </div>
+        <div class="text-mask">
+            <div class="flex-1">
+                <img src="/assets/images/mask-text1.png">
+            </div>
+        </div>
+    </div>
     <div id="project-detail-banner" class="_shadow-bottom">
         <div class="app-banner-image active" style="background-image: url(/assets/images/projects/1.png);">
 
@@ -50,7 +95,7 @@
         <div id="project-detail-summary">
             <div class="header">
                 <h1 class="title">Khách sạn nam cường</h1>
-                <div class="share">
+                <div class="share hide-sm">
                     <span class="label">
                         CHIA SẺ:
                     </span>
@@ -84,111 +129,79 @@
             </div>
             <div class="grid">
                 <div class="box">
-                    <div class="box-header">
-                        <div class="label">Thể loại</div>
-                        <div class="value">KHÁCH SẠN</div>
-                    </div>
-                    <div class="box-content">
-                        <p>
-                            Tổng thể kiến ​​trúc- quy hoạch của khách sạn Nam Cường có xu hướng kiến ​​trúc tân cổ điển
-                            Châu
-                            Âu,
-                            chiều thế nhưng đơn giản hóa các chi tiết trang trí cổ điển. Công trình như một tòa nhà đã
-                            từng
-                            tồn
-                            tại tại nơi đây từ hồi đầu thế kỷ cùng với những nhà thờ lớn, hay nhà máy dệt Nam Định...
-                            cái
-                            này
-                            được trùng tu thành một khách sạn lớn đương đại.
-                        </p>
-                    </div>
+                    <div class="label">Thể loại</div>
+                    <div class="value">KHÁCH SẠN</div>
+
                 </div>
                 <div class="box">
-                    <div class="box-header">
-                        <div class="label">Thể loại</div>
-                        <div class="value">KHÁCH SẠN</div>
-                    </div>
-                    <div class="box-content">
-                        <p>
-                            Tổng thể kiến ​​trúc- quy hoạch của khách sạn Nam Cường có xu hướng kiến ​​trúc tân cổ điển
-                            Châu
-                            Âu,
-                            chiều thế nhưng đơn giản hóa các chi tiết trang trí cổ điển. Công trình như một tòa nhà đã
-                            từng
-                            tồn
-                            tại tại nơi đây từ hồi đầu thế kỷ cùng với những nhà thờ lớn, hay nhà máy dệt Nam Định...
-                            cái
-                            này
-                            được trùng tu thành một khách sạn lớn đương đại.
-                        </p>
-                    </div>
+                    <div class="label">Công việc</div>
+                    <div class="value">NỘI THẤT</div>
+
                 </div>
                 <div class="box">
-                    <div class="box-header">
-                        <div class="label">Thể loại</div>
-                        <div class="value">KHÁCH SẠN</div>
-                    </div>
-                    <div class="box-content">
-                        <p>
-                            Tổng thể kiến ​​trúc- quy hoạch của khách sạn Nam Cường có xu hướng kiến ​​trúc tân cổ điển
-                            Châu
-                            Âu,
-                            chiều thế nhưng đơn giản hóa các chi tiết trang trí cổ điển. Công trình như một tòa nhà đã
-                            từng
-                            tồn
-                            tại tại nơi đây từ hồi đầu thế kỷ cùng với những nhà thờ lớn, hay nhà máy dệt Nam Định...
-                            cái
-                            này
-                            được trùng tu thành một khách sạn lớn đương đại.
-                        </p>
-                    </div>
+                    <div class="label">Địa điểm</div>
+                    <div class="value">Đà Nẵng</div>
+
                 </div>
                 <div class="box">
-                    <div class="box-header">
-                        <div class="label">Thể loại</div>
-                        <div class="value">KHÁCH SẠN</div>
-                    </div>
-                    <div class="box-content">
-                        <p>
-                            Tổng thể kiến ​​trúc- quy hoạch của khách sạn Nam Cường có xu hướng kiến ​​trúc tân cổ điển
-                            Châu
-                            Âu,
-                            chiều thế nhưng đơn giản hóa các chi tiết trang trí cổ điển. Công trình như một tòa nhà đã
-                            từng
-                            tồn
-                            tại tại nơi đây từ hồi đầu thế kỷ cùng với những nhà thờ lớn, hay nhà máy dệt Nam Định...
-                            cái
-                            này
-                            được trùng tu thành một khách sạn lớn đương đại.
-                        </p>
-                    </div>
+                    <div class="label">Thời gian</div>
+                    <div class="value">2019</div>
+
                 </div>
+            </div>
+            <div class="content inner-html">
+                <table style="width:100%">
+                    <tr>
+                        <td style="width:50%;padding-right: 12px;">
+                            <p style="text-align: justify;">
+                                Tổng thể kiến ​​trúc- quy hoạch của khách sạn Nam Cường có xu hướng kiến ​​trúc
+                                tân cổ điển
+                                Châu Âu, chiều thế nhưng đơn giản hóa các chi tiết trang trí cổ điển. Công trình
+                                như một tòa
+                                nhà đã từng tồn tại tại nơi đây từ hồi đầu thế kỷ cùng với những nhà thờ lớn,
+                                hay nhà máy
+                                dệt Nam Định... cái này được trùng tu thành một khách sạn lớn đương đại.
+                            </p>
+                        </td>
+                        <td style="width:50%;padding-left: 12px;">
+                            <p style="text-align: justify;">
+                                Khách sạn Nam Cường có sứ mệnh lớn với tỉnh nhà vì là khách sạn nghỉ dưỡng 5*
+                                đầu tiên và có
+                                qui mô, vị trí quan trọng của 1 vùng đất địa linh nhân kiệt Công trình hướng tới
+                                việc tôn
+                                vinh các chất liệu bản địa vùng Nam Định như: Đục gỗ La Xuyên, Sơn mài Cát Đằng,
+                                tơ lụa Cổ
+                                Chất, đúc đồng Vạn Điểm (Ý Yên), cây cảnh Vy khê ( Nam Trực)...
+                            </p>
+                        </td>
+                    </tr>
+                </table>
             </div>
         </div>
         <div id="project-detail-photo">
             <div class="photo-grid" id="lightgallery">
-                <a class="item" href="/assets/images/projects/1.png"
-                    style="background-image: url(/assets/images/projects/1.png);">
+                <a class="item" href="/assets/images/projects/detail/1.jpg"
+                    style="background-image: url(/assets/images/projects/detail/1.jpg);">
 
                 </a>
-                <a class="item" href="/assets/images/projects/2.png"
-                    style="background-image: url(/assets/images/projects/2.png);">
+                <a class="item" href="/assets/images/projects/detail/2.jpg"
+                    style="background-image: url(/assets/images/projects/detail/2.jpg);">
 
                 </a>
-                <a class="item" href="/assets/images/projects/3.png"
-                    style="background-image: url(/assets/images/projects/3.png);">
+                <a class="item" href="/assets/images/projects/detail/3.jpg"
+                    style="background-image: url(/assets/images/projects/detail/3.jpg);">
 
                 </a>
-                <a class="item" href="/assets/images/projects/4.png"
-                    style="background-image: url(/assets/images/projects/4.png);">
+                <a class="item" href="/assets/images/projects/detail/4.jpg"
+                    style="background-image: url(/assets/images/projects/detail/4.jpg);">
 
                 </a>
-                <a class="item" href="/assets/images/projects/5.png"
-                    style="background-image: url(/assets/images/projects/5.png);">
+                <a class="item" href="/assets/images/projects/detail/5.jpg"
+                    style="background-image: url(/assets/images/projects/detail/5.jpg);">
 
                 </a>
-                <a class="item" href="/assets/images/projects/6.png"
-                    style="background-image: url(/assets/images/projects/6.png);">
+                <a class="item" href="/assets/images/projects/detail/6.jpg"
+                    style="background-image: url(/assets/images/projects/detail/6.jpg);">
 
                 </a>
             </div>
@@ -238,9 +251,13 @@
         </div>
     </div>
     <div id="app-footer">
+        <div id="demo-flag">
+            <img src="/assets/images/demo_flag.png">
+        </div>
         <div class="inner">
             <div class="app-footer-sections" id="app-footer-sections">
-                <div class="app-footer-section">
+
+                <div class="app-footer-section full">
                     <div class="label">
                         Sơ đồ trang
                     </div>
@@ -304,19 +321,202 @@
                 </div>
             </div>
             <div class="app-footer-project-section">
-                <a class="label">Khám phá →</a>
-                <h1 class="text">Dự án</h1>
+                <a class="label" href="/blog/index.html">Khám phá →</a>
+                <h1 class="text">Blog</h1>
             </div>
         </div>
         <div class="bottom">
-            <div>©2024 HTT Sang Tao, Alrights Reserved</div>
+            <div class="copyright">
+                <div>©2024 HTT Sang Tao, Alrights Reserved</div>
+                <a>Site by MarMedia</a>
+            </div>
             <a id="back-to-top-btn">Back to top ↑</a>
-            <div>
-                <a id="marmedia" href="#">Site by MarMedia</a>
+            <a id="marmedia" href="#">Site by MarMedia</a>
+        </div>
+    </div>
+    <div id="popup-menu">
+        <div class="inner">
+            <div class="popup-menu-left">
+                <div class="full-column-flex">
+                    <div class="logo">
+                        <a href="/" title="Trang chủ HTT Sáng Tạo">
+                            <img alt="HTT Sang Tao" src="/assets/images/logo.png">
+                        </a>
+                    </div>
+                    <div class="grid-sections">
+                        <div class="grid-sections-inner">
+                            <div class="grid-section-item full">
+                                <div class="label">
+                                    Trụ sở chính
+                                </div>
+                                <div class="content">
+                                    <div>OV8.O5 Viglacera Xuân Phương,Nam Từ Liêm, Hà Nội.</div>
+                                    <a href="#">(+84 24) 43 714 7219</a>
+
+                                </div>
+                            </div>
+                            <div class="grid-section-item">
+                                <div class="label">
+                                    Email kinh doanh
+                                </div>
+                                <div class="content">
+
+                                    <a href="#">admin@httcreative.com</a>
+
+                                </div>
+                            </div>
+                            <div class="grid-section-item">
+                                <div class="label">
+                                    Email tuyển dụng
+                                </div>
+                                <div class="content">
+
+                                    <a href="#">job.httcreative@gmail.com</a>
+
+                                </div>
+                            </div>
+                            <div class="grid-section-item">
+                                <div class="label">
+                                    Mạng xã hội
+                                </div>
+                                <div class="content">
+
+                                    <a href="#">Facebook</a>
+                                    <a href="#">Youtube</a>
+                                    <a href="#">Instagram</a>
+                                </div>
+                            </div>
+                            <div class="grid-section-item">
+                                <div class="label">
+                                    Hồ sơ năng lực
+                                </div>
+                                <div class="content">
+
+                                    <a href="#">[↓] HTTC CP 2024</a>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="copyright">
+                        ©2024 HTT Sang Tao, Alrights Reserved
+                    </div>
+                </div>
+
+            </div>
+            <div class="popup-menu-right">
+                <div class="sm-menu-top">
+                    <a class="logo" href="/" title="Trang chủ HTT Sáng Tạo">
+                        <img alt="HTT Sang Tao" src="/assets/images/logo.png">
+                    </a>
+                    <a class="menu-toggler">
+                        <svg width="28" height="30" viewBox="0 0 28 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <line x1="26.7151" y1="2.5882" x2="1.08129" y2="28.8099" stroke="#348DCC"
+                                stroke-width="2" />
+                            <line x1="1.08129" y1="1.19012" x2="26.7151" y2="27.4119" stroke="#348DCC"
+                                stroke-width="2" />
+                        </svg>
+
+
+                    </a>
+                </div>
+                <ul>
+
+                    <li>
+                        <a href="/" class="link">
+                            <span>0.</span>
+                            <span>
+                                Trang chủ
+                            </span>
+                            <svg width="17" height="8" viewBox="0 0 17 8" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M0.646446 3.64645C0.451185 3.84171 0.451185 4.15829 0.646446 4.35355L3.82843 7.53553C4.02369 7.73079 4.34027 7.73079 4.53553 7.53553C4.7308 7.34027 4.7308 7.02369 4.53553 6.82843L1.70711 4L4.53553 1.17157C4.7308 0.97631 4.7308 0.659727 4.53553 0.464465C4.34027 0.269203 4.02369 0.269203 3.82843 0.464465L0.646446 3.64645ZM17 3.5L1 3.5L1 4.5L17 4.5L17 3.5Z"
+                                    fill="currentColor" />
+                            </svg>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/about/" class="link">
+                            <span>1.</span>
+                            <span>
+                                HTTC
+                            </span>
+                            <svg width="17" height="8" viewBox="0 0 17 8" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M0.646446 3.64645C0.451185 3.84171 0.451185 4.15829 0.646446 4.35355L3.82843 7.53553C4.02369 7.73079 4.34027 7.73079 4.53553 7.53553C4.7308 7.34027 4.7308 7.02369 4.53553 6.82843L1.70711 4L4.53553 1.17157C4.7308 0.97631 4.7308 0.659727 4.53553 0.464465C4.34027 0.269203 4.02369 0.269203 3.82843 0.464465L0.646446 3.64645ZM17 3.5L1 3.5L1 4.5L17 4.5L17 3.5Z"
+                                    fill="currentColor" />
+                            </svg>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/project/" class="link">
+                            <span>2.</span>
+                            <span>
+                                Dự án
+                            </span>
+                            <svg width="17" height="8" viewBox="0 0 17 8" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M0.646446 3.64645C0.451185 3.84171 0.451185 4.15829 0.646446 4.35355L3.82843 7.53553C4.02369 7.73079 4.34027 7.73079 4.53553 7.53553C4.7308 7.34027 4.7308 7.02369 4.53553 6.82843L1.70711 4L4.53553 1.17157C4.7308 0.97631 4.7308 0.659727 4.53553 0.464465C4.34027 0.269203 4.02369 0.269203 3.82843 0.464465L0.646446 3.64645ZM17 3.5L1 3.5L1 4.5L17 4.5L17 3.5Z"
+                                    fill="currentColor" />
+                            </svg>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/blog/" class="link">
+                            <span>3.</span>
+                            <span>
+                                Blog
+                            </span>
+                            <svg width="17" height="8" viewBox="0 0 17 8" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M0.646446 3.64645C0.451185 3.84171 0.451185 4.15829 0.646446 4.35355L3.82843 7.53553C4.02369 7.73079 4.34027 7.73079 4.53553 7.53553C4.7308 7.34027 4.7308 7.02369 4.53553 6.82843L1.70711 4L4.53553 1.17157C4.7308 0.97631 4.7308 0.659727 4.53553 0.464465C4.34027 0.269203 4.02369 0.269203 3.82843 0.464465L0.646446 3.64645ZM17 3.5L1 3.5L1 4.5L17 4.5L17 3.5Z"
+                                    fill="currentColor" />
+                            </svg>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/contact/" class="link">
+                            <span>4.</span>
+                            <span>
+                                Liên hệ
+                            </span>
+                            <svg width="17" height="8" viewBox="0 0 17 8" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M0.646446 3.64645C0.451185 3.84171 0.451185 4.15829 0.646446 4.35355L3.82843 7.53553C4.02369 7.73079 4.34027 7.73079 4.53553 7.53553C4.7308 7.34027 4.7308 7.02369 4.53553 6.82843L1.70711 4L4.53553 1.17157C4.7308 0.97631 4.7308 0.659727 4.53553 0.464465C4.34027 0.269203 4.02369 0.269203 3.82843 0.464465L0.646446 3.64645ZM17 3.5L1 3.5L1 4.5L17 4.5L17 3.5Z"
+                                    fill="currentColor" />
+                            </svg>
+
+                        </a>
+                    </li>
+
+                </ul>
+                <div class="sm-menu-bottom">
+                    <div><img src="/assets/images/htt_sang_tao_sm.png"></div>
+                    <div>
+                        ©2024 HTT Sang Tao, All Rights Reserved
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
+    <script src="/assets/scripts/jquery/dist/jquery.min.js"></script>
+    <script src="/assets/scripts/main.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            window.onInitPage(this, false);
+        });
+    </script>
     <script type="module">
         import PhotoSwipeLightbox from '/node_modules/photoswipe/dist/photoswipe-lightbox.esm.js';
         const lightbox = new PhotoSwipeLightbox({

@@ -1,20 +1,15 @@
 #project-list-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     color: var(--color-text);
     padding: 24px var(--app-padding, 50px);
     .search-box {
-        display: flex;
-        align-items: center;
-        gap: 12px;
         .label {
             text-transform: uppercase;
+            display: none;
         }
         .input-group {
             position: relative;
-
             input {
+                width: 100%;
                 color: inherit;
                 min-width: 200px;
                 border: 0;
@@ -40,9 +35,7 @@
         }
     }
     .display-switcher {
-        display: flex;
-        align-items: center;
-        gap: 12px;
+        display: none;
         .label {
             text-transform: uppercase;
         }
@@ -86,9 +79,10 @@
     }
 }
 .project-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    // display: grid;
+    // grid-template-columns: 1fr 1fr;
     .project {
+        display: block;
         color: inherit;
         text-decoration: none;
         background-position: center;
@@ -221,14 +215,13 @@
 .project-list-footer {
     display: flex;
     align-items: center;
-    padding: 100px 50px;
+    padding: 50px var(--app-padding);
     color: var(--color-text);
     ul.list-pagination {
         flex: 1;
     }
     .view-switch {
-        display: flex;
-        align-items: center;
+        display: none;
         opacity: 0.5;
         gap: 12px;
         .view-switch-button {
@@ -253,10 +246,11 @@ ul.list-pagination {
         a {
             background-color: #000;
             display: block;
-            width: 60px;
-            width: 60px;
+            width: 46px;
+            height: 46px;
+            line-height: 46px;
             text-align: center;
-            line-height: 60px;
+
             padding: 0;
             color: var(--color-text);
             border-right: 1px solid #b2b3b614;
@@ -269,5 +263,51 @@ ul.list-pagination {
                 font-weight: 600;
             }
         }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #project-list-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .search-box {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            .label {
+                display: inline-block;
+            }
+        }
+        .display-switcher {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+    }
+    .project-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .project-list-footer {
+        display: flex;
+        align-items: center;
+        padding: 100px var(--app-padding);
+        .view-switch {
+            display: flex;
+            align-items: center;
+        }
+    }
+    ul.list-pagination {
+        li {
+            a {
+                width: 60px;
+                height: 60px;
+                line-height: 60px;
+            }
+        }
+    }
+    #projects-wrapper {
+        margin-top: 100px;
     }
 }
